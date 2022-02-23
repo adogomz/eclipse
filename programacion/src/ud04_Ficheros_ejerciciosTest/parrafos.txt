@@ -1,0 +1,6 @@
+Vamos a contar
+cuantas lineas tiene
+cada parrafo.
+Los parrafos estan
+finalizan con un punto.
+Puede haber parrafos de una sola linea.

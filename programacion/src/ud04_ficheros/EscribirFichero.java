@@ -1,0 +1,27 @@
+package ud04_ficheros;
+
+// Programa que muestra el uso del objeto de la clase PrintStream
+// para escribir texto en un fichero
+import java.io.*;
+
+public class EscribirFichero {
+   public static void main(String[] args) throws FileNotFoundException {
+      // Conectaremos con el fichero
+      File fichero = new File("E:\\WORKstation\\eclipse\\programacion\\src\\ud04_ficheros\\salida.txt");
+      PrintStream escribirFichero = new PrintStream(fichero);
+      // PrintStream escribirFichero = System.out;
+      
+      // Escribiremos   
+      escribir(escribirFichero);
+      
+      // Cerraremos la conexión
+      escribirFichero.close();
+   }
+   
+   public static void escribir(PrintStream escribirFichero) {
+      escribirFichero.println("En este programa vamos a escribir texto en un fichero.");
+      escribirFichero.println("Lo vamos a hacer utilizando un objeto de la clase PrintStream.");
+      escribirFichero.println("System.out también es un objeto de la clase PrintStream.");
+      escribirFichero.println("Todo lo que hemos hecho con System.out funcionará con ficheros");
+   }
+}
