@@ -1,1 +1,17 @@
 2022-02-23 23:30:50,031 [Worker-1: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is not available. Remote download required.
+2022-03-08 23:04:55,150 [Worker-0: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2022-03-08 23:04:55,600 [Worker-0: Loading available Gradle versions] ERROR o.e.b.c.i.u.g.PublishedGradleVersions - Cannot write Gradle version information cache file.
+java.io.FileNotFoundException: C:\Users\Usuario\.cache\tooling\gradle\versions.json (Acceso denegado)
+	at java.base/java.io.FileOutputStream.open0(Native Method)
+	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:293)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:235)
+	at com.google.common.io.Files$FileByteSink.openStream(Files.java:193)
+	at com.google.common.io.Files$FileByteSink.openStream(Files.java:181)
+	at com.google.common.io.ByteSink$AsCharSink.openStream(ByteSink.java:149)
+	at com.google.common.io.CharSource$StringCharSource.copyTo(CharSource.java:648)
+	at org.eclipse.buildship.core.internal.util.gradle.PublishedGradleVersions.storeCacheVersionsFile(PublishedGradleVersions.java:184)
+	at org.eclipse.buildship.core.internal.util.gradle.PublishedGradleVersions.tryToDownloadAndCacheVersions(PublishedGradleVersions.java:150)
+	at org.eclipse.buildship.core.internal.util.gradle.PublishedGradleVersions.tryToUpdateOutdatedVersionsFile(PublishedGradleVersions.java:133)
+	at org.eclipse.buildship.core.internal.util.gradle.PublishedGradleVersions.create(PublishedGradleVersions.java:117)
+	at org.eclipse.buildship.core.internal.util.gradle.PublishedGradleVersionsWrapper$LoadVersionsJob.run(PublishedGradleVersionsWrapper.java:60)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
